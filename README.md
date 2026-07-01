@@ -1,33 +1,47 @@
-# Fuzzy Logic and PID Control for TurtleBot
+# Fuzzy Logic & PID Control for TurtleBot
 
-## Overview
-This project showcases a TurtleBot control system using fuzzy logic and PID controllers for autonomous navigation. The robot performs tasks such as right-edge following, obstacle avoidance, and combining behaviors to navigate efficiently and smoothly in dynamic environments.
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
+[![ROS](https://img.shields.io/badge/ROS-TurtleBot-22314E.svg)](https://www.ros.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+Autonomous **TurtleBot** navigation using **fuzzy logic** and **PID controllers** — right-edge following, obstacle avoidance, and adaptive behavior switching from sensor inputs.
+
+**Author:** [Diego Armando Salinas Lugo](https://sites.google.com/tec.mx/salinasdiegoarmando/know-me)
+
+---
 
 ## Features
-- **Fuzzy Logic System:** Processes sensor data with membership functions and rules to make real-time decisions.
-- **PID Controller:** Provides precise control for path-following.
-- **Obstacle Avoidance:** Utilizes front sensors to detect and avoid obstacles.
-- **Right Edge Following:** Maintains a safe distance from the edge using side sensors.
-- **Adaptive Logic:** Combines edge-following and obstacle avoidance based on sensor inputs.
 
-## Sensors
-- **Right Sensors (RFS, RBS):** Detect distances for edge-following.
-- **Front Sensors (F, FR, FL):** Monitor obstacles for collision prevention.
+- Fuzzy membership functions and rule-based decision making
+- PID controller for precise path following
+- Front sensors (F, FR, FL) for obstacle avoidance
+- Side sensors (RFS, RBS) for edge following
+- Combined adaptive logic for dynamic environments
 
-## How It Works
-1. **Sensor Inputs:** Data from sensors is processed to evaluate proximity.
-2. **Fuzzy Membership Functions:** Map sensor values to defined categories.
-3. **Rules and Logic:** Fuzzy rules determine the robot's behavior (e.g., speed and direction adjustments).
-4. **Defuzzification:** Converts fuzzy results into actionable outputs for robot movement.
-5. **Conditional Logic:** Determines whether to follow the edge or avoid obstacles.
+## How it works
 
-The robot’s linear velocity is fixed at 0.1, while angular velocity is adjusted dynamically based on fuzzy outputs or PID calculations.
+1. Read proximity from TurtleBot sensors
+2. Map values to fuzzy categories via membership functions
+3. Apply fuzzy rules → defuzzify to velocity commands
+4. Switch between edge-following and avoidance modes
 
-## Video Demonstrations
-- [PID Control](https://youtube.com/shorts/en-QWag6A8M?feature=share)
-- [Right Edge Following](https://youtube.com/shorts/RiOUFpySFm4?feature=share)
-- [Obstacle Avoidance](https://youtube.com/shorts/7xEmcVDUwX8?feature=share)
-- [Combined Behavior](https://youtube.com/shorts/JMyCX0FFmk8?feature=share)
+Linear velocity fixed at **0.1**; angular velocity adjusted dynamically.
 
-## Conclusion
-This project demonstrates the power of fuzzy logic and PID controllers in robotics. Explore the repository to learn about the implementation and watch the videos to see the TurtleBot in action.
+## Prerequisites
+
+- ROS-compatible TurtleBot environment
+- Python 3.x with project dependencies
+- Sensor drivers configured for your robot platform
+
+## Demo videos
+
+| Behavior | Link |
+|----------|------|
+| PID control | [Watch](https://youtube.com/shorts/en-QWag6A8M) |
+| Right edge following | [Watch](https://youtube.com/shorts/RiOUFpySFm4) |
+| Obstacle avoidance | [Watch](https://youtube.com/shorts/7xEmcVDUwX8) |
+| Combined behavior | [Watch](https://youtube.com/shorts/JMyCX0FFmk8) |
+
+## License
+
+MIT — see [LICENSE](LICENSE).

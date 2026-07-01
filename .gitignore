@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+env/
+.env
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data & models
+*.csv
+!data/.gitkeep
+models/
+*.joblib
+*.pkl
+*.h5
+
+# OS & IDE
+.DS_Store
+.idea/
+.vscode/
+
+# Logs
+*.log
